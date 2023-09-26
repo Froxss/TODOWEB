@@ -248,12 +248,54 @@ li {
   background-color: #b3544c;
 }
 .popup {
+  margin: auto;
+  padding: auto;
   display: none;
+  justify-content: space-between;
+
+  width: 50%;
+  height: 80px;
+  border: #333;
+  outline: #333;
+  justify-content: center;
 }
-/* Yeni görevlerin hover efekti */
+
 .yeni-gorev:hover .gripbutton {
   background-color: #b3544c;
 }
 hr {
   width: 100%;
+}
+
+#addTask {
+  background-color: #b3544c;
+  width: 100%;
+  height: 40px;
+  margin: auto;
+}
+
+#gorevIsmi {
+  height: 30px;
+  width: 218px;
+  background-color: #da675c60;
+  border: #333 solid 1px;
+  border-radius: 4px;
+  outline: none;
+}
+#gorevTarihi {
+  height: 30px;
+  width: 218px;
+  background-color: #da675c60;
+  border: #333 solid 1px;
+  border-radius: 4px;
+  outline: none;
+}
+
+#gorevAciklamasi {
+  height: 30px;
+  width: 218px;
+  background-color: #da675c60;
+  border: #333 solid 1px;
+  border-radius: 4px;
+  outline: none;
 }

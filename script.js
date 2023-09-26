@@ -42,10 +42,10 @@ function yeniGorevEkle(gorevIsmi, gorevAciklamasi, gorevTarihi) {
 }
 
 yeniGorevButon.addEventListener("click", () => {
-  if (popup.style.display == "block") {
+  if (popup.style.display == "flex") {
     popup.style.display = "none";
   } else {
-    popup.style.display = "block";
+    popup.style.display = "flex";
   }
 });
 
