@@ -44,8 +44,10 @@ function yeniGorevEkle(gorevIsmi, gorevAciklamasi, gorevTarihi) {
 yeniGorevButon.addEventListener("click", () => {
   if (popup.style.display == "flex") {
     popup.style.display = "none";
+    yeniGorevButon.innerText = "Yeni Görev Ekle";
   } else {
     popup.style.display = "flex";
+    yeniGorevButon.innerText = "Görev eklemekten vazgeç";
   }
 });
 
