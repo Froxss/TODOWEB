@@ -1,6 +1,8 @@
 body {
   margin: auto;
   font-family: "Roboto Serif", serif;
+  overflow-x: hidden;
+  transition: margin-left 0.3s;
 }
 button {
   background-color: transparent;
@@ -74,12 +76,184 @@ li {
   left: -250px;
   width: 250px;
   height: 100%;
+  margin-top: 50px;
   background-color: #333;
   color: #fff;
-  transition: left 0.3s;
+  transition: left 0.5s;
   z-index: 1;
 }
 
-.sidebar-open {
+.sidebar_open {
   left: 0;
+}
+
+.body_container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  width: 800px;
+  min-width: 300px;
+}
+.main_app {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  max-width: 900px;
+}
+.card_item_container {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 500px;
+  margin-top: 2px;
+  box-shadow: 1px 1px 1px 1px #e6e6e6;
+  border-radius: 10px;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.gorev_ismi {
+  color: black;
+}
+.gorev_aciklamasi {
+  color: black;
+}
+.gorev_tarihi {
+  color: black;
+}
+.card_items_center {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  gap: 4px;
+}
+.card_items_left {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+  align-items: start;
+}
+.card_items_right {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+
+  cursor: pointer;
+  font-size: 22px;
+
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #da665c;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#grip_icon {
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  right: 15px;
+}
+.body_container:hover #grip_icon {
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+
+.yeni_gorev {
+  display: flex;
+  background-color: #da665c;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  height: 60px;
+  min-width: 350px;
+  margin-top: 2px;
+  box-shadow: 1px 1px 1px 1px #e6e6e6;
+  border-radius: 10px;
+  font-size: 15px;
+
+  margin: auto;
+  cursor: pointer;
+}
+
+.yeni_gorev button {
+  flex: 1;
+  background-color: #da665c transparent;
+  color: white;
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.yeni_gorev:hover {
+  background-color: #b3544c;
+}
+.popup {
+  display: none;
+}
+/* Yeni görevlerin hover efekti */
+.yeni-gorev:hover .gripbutton {
+  background-color: #b3544c;
+}
+hr {
+  width: 100%;
 }

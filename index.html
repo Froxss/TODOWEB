@@ -21,7 +21,9 @@
       <div class="left_button_group">
         <ul class="left_button_container">
           <li class="left_button_item" id="menu-button">
-            <button><i class="fa-solid fa-bars fa-xl"></i></button>
+            <button id="openSidebar">
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
           </li>
           <li class="left_button_item">
             <button><i class="fa-solid fa-house fa-lg"></i></button>
@@ -81,14 +83,32 @@
         </ul>
       </div>
     </div>
-    <div class="sidebar" id="sidebar">
-      <ul>
-        <li>Deneme1</li>
-        <li>Deneme2</li>
-        <li>Deneme3</li>
-        <li>Deneme4</li>
-        <li>Deneme5</li>
+    <div class="main_app" id="mainApp">
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li>Deneme1</li>
+          <li>Deneme2</li>
+          <li>Deneme3</li>
+          <li>Deneme4</li>
+          <li>Deneme5</li>
+        </ul>
+      </div>
+      <div class="header_area"><h3>Bugün</h3></div>
+      <ul class="body_container" id="task_list">
+        <li></li>
       </ul>
+      <div class="yeni_gorev">
+        <button id="yeniGorevButon">Yeni Görev Ekle</button>
+      </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <input type="text" id="gorevIsmi" placeholder="Görev İsmi" />
+        <input type="text" id="gorevAciklamasi" placeholder="Açıklama" />
+        <input type="date" id="gorevTarihi" />
+        <button id="addTask">Görevi Ekle</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
