@@ -53,12 +53,16 @@ document.getElementById("addTask").addEventListener("click", () => {
   const gorevIsmi = document.getElementById("gorevIsmi").value;
   const gorevAciklamasi = document.getElementById("gorevAciklamasi").value;
   const gorevTarihi = document.getElementById("gorevTarihi").value;
+  const valueControl =
+    gorevIsmi === "" || gorevAciklamasi === "" || gorevTarihi === "";
 
-  yeniGorevEkle(gorevIsmi, gorevAciklamasi, gorevTarihi);
-
-  popup.style.display = "none";
-
-  document.getElementById("gorevIsmi").value = "";
-  document.getElementById("gorevAciklamasi").value = "";
-  document.getElementById("gorevTarihi").value = "";
+  if (!valueControl) {
+    yeniGorevEkle(gorevIsmi, gorevAciklamasi, gorevTarihi);
+    popup.style.display = "none";
+    document.getElementById("gorevIsmi").value = "";
+    document.getElementById("gorevAciklamasi").value = "";
+    document.getElementById("gorevTarihi").value = "";
+  } else {
+    alert("Lütfen tüm alanları doldurun!");
+  }
 });
