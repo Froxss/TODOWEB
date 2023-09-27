@@ -11,7 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 4000, "GRAD" 0, "opsz" 24;
+      }
+
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
     </style>
     <title>Bugün</title>
@@ -84,15 +92,6 @@
       </div>
     </div>
     <div class="main_app" id="mainApp">
-      <div class="sidebar" id="sidebar">
-        <ul>
-          <li>Deneme1</li>
-          <li>Deneme2</li>
-          <li>Deneme3</li>
-          <li>Deneme4</li>
-          <li>Deneme5</li>
-        </ul>
-      </div>
       <div class="header_area"><h3>Bugün</h3></div>
       <ul class="body_container" id="task_list">
         <li></li>
@@ -117,6 +116,54 @@
           <button id="addTask">Görevi Ekle</button>
         </div>
       </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <ul id="sidebarContainer" class="side_ar_container">
+        <li class="sideBarContainerItem">
+          <i
+            id="sideIcons"
+            class="fa-solid fa-folder-tree fa-lg"
+            style="color: #9ec2ff"
+          ></i>
+          <p class="sideBarContainerText">Klasör</p>
+        </li>
+
+        <li class="sideBarContainerItem">
+          <i
+            id="sideIcons"
+            class="fa-regular fa-calendar-days fa-lg"
+            style="color: #369307"
+          ></i>
+          <p class="sideBarContainerText">Bugün</p>
+        </li>
+        <li class="sideBarContainerItem">
+          <i
+            id="sideIcons"
+            class="fa-solid fa-rectangle-list fa-lg"
+            style="color: #eb8909"
+          ></i>
+          <p class="sideBarContainerText">Yaklaşan</p>
+        </li>
+        <li class="sideBarContainerItem">
+          <i
+            id="sideIcons"
+            class="fa-solid fa-filter-circle-xmark fa-lg"
+            style="color: #692ec2"
+          ></i>
+          <p class="sideBarContainerText">Filtreler & Etiketler</p>
+        </li>
+      </ul>
+      <ul id="sidebarContainer2" class="side_ar_container">
+        <li class="sideBarContainerItem2">
+          <p class="sideBarContainerText2">
+            Projeler<span id="add_icon" class="material-symbols-outlined">
+              add </span
+            ><span id="chevron_left_icon" class="material-symbols-outlined">
+              chevron_left
+            </span>
+          </p>
+        </li>
+      </ul>
     </div>
 
     <script src="script.js"></script>
